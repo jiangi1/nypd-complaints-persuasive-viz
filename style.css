@@ -125,3 +125,24 @@ img {
         max-width: 95%;
     }
 }
+
+.team-names {
+    text-align: center;
+    margin: -15px auto 30px auto;
+    padding: 8px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 40px;
+    width: fit-content;
+}
+
+.team-names p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    color: #c9d1d9;
+    margin: 0;
+}
+
+.team-names strong {
+    color: #c084fc;
+    font-weight: 600;
+}
