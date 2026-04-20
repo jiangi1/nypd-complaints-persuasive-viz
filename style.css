@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -75,14 +75,13 @@ h3 {
 
 .viz-grid {
     display: flex;
+    flex-direction: column;
     gap: 30px;
-    flex-wrap: wrap;
     margin: 20px 0;
 }
 
 .viz-card {
-    flex: 1;
-    min-width: 350px;
+    width: 100%;
     background: rgba(255, 255, 255, 0.06);
     backdrop-filter: blur(8px);
     border-radius: 20px;
@@ -142,13 +141,5 @@ h3 {
     
     .proposition {
         padding: 20px 24px;
-    }
-    
-    .viz-grid {
-        flex-direction: column;
-    }
-    
-    .viz-card {
-        min-width: auto;
     }
 }
