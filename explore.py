@@ -36,7 +36,7 @@ print(f"   Actual NO discipline: {no_discipline_count/len(df)*100:.1f}%")
 if no_discipline_count/len(df)*100 > 70:
     print("   PROPOSITION SUPPORTED by data - Use earnest techniques for Viz A")
 else:
-    print("   Proposition NOT supported - You'll need deceptive techniques for Viz A")
+    print("   ⚠️ Proposition NOT supported - You'll need deceptive techniques for Viz A")
 
 if 'unique_mos_id' in df.columns:
     print("\n6. OFFICER COMPLAINT DISTRIBUTION:")
