@@ -24,10 +24,15 @@
     <div class="rationale">
         <p><strong>Design Decisions and Rationale:</strong></p>
         <ul>
-            <li><strong>Decision 1:</strong> [Describe your design decision] <em>(Score: X, Earnest/Deceptive)</em> - [Explain rationale]</li>
-            <li><strong>Decision 2:</strong> [Describe your design decision] <em>(Score: X, Earnest/Deceptive)</em> - [Explain rationale]</li>
-            <li><strong>Decision 3:</strong> [Describe your design decision] <em>(Score: X, Earnest/Deceptive)</em> - [Explain rationale]</li>
-            <li><strong>Decision 4:</strong> [Describe your design decision] <em>(Score: X, Earnest/Deceptive)</em> - [Explain rationale]</li>
+            <li><strong>Decision 1: Punchy, assertive title framing ("Thousands of Complaints…Result in No Action")</strong> <em>(Score: -1.5, Deceptive)</em> - The title uses emotionally charged wording and frames the relationship as more direct and causal than the data can fully support. This helps immediately capture attention and sets a strong narrative direction, but it also biases interpretation before the viewer examines the visualization. A neutral alternative would describe outcomes without implying causality, but that was less effective for persuasion and therefore not chosen.</li>
+            
+            <li><strong>Decision 2: Truncated and zoomed-in Y-axis for percent without charges</strong> <em>(Score: -2, Fully Deceptive)</em> - Starting the axis near ~90% exaggerates small differences and makes them appear much larger than they actually are. This strengthens the perceived disparity and makes the argument visually more compelling, but it distorts the true scale of variation. A full 0–100% axis would be more accurate and transparent, but it significantly weakens the visual impact, which was important for the message.</li>
+            
+            <li><strong>Decision 3: Narrow definition of "no action" (grouping outcomes together)</strong> <em>(Score: -1, Deceptive)</em> - Combining multiple outcomes into a single category simplifies the story but removes important distinctions between different types of resolutions. This increases the apparent rate of inaction and makes the claim more persuasive, but it reduces nuance and clarity. A more detailed breakdown was considered, but it made the visualization harder to interpret quickly.</li>
+            
+            <li><strong>Decision 4: Filtering to four racial groups</strong> <em>(Score: -0.5, Slightly Deceptive)</em> - Limiting the chart to four groups improves readability and makes comparisons easier to follow, but it excludes other categories that could provide additional context. This helps focus the narrative and reduces clutter, but it also narrows the scope of interpretation. Including all groups was considered, but it made the visualization visually overloaded and less clear.</li>
+            
+            <li><strong>Decision 5: Side-by-side layout (rate + total complaints)</strong> <em>(Score: +1, Earnest)</em> - Placing percentages next to total complaint counts adds meaningful context about scale alongside proportional differences. This improves understanding of how small percentage gaps translate into real numbers. Separating these elements was considered, but it made it harder to connect outcome counts with outcome rates in a single view.</li>
         </ul>
     </div>
 
@@ -43,22 +48,38 @@
     <div class="rationale">
         <p><strong>Design Decisions and Rationale:</strong></p>
         <ul>
-            <li><strong>Decision 1:</strong> [Describe your design decision] <em>(Score: X, Earnest/Deceptive)</em> - [Explain rationale]</li>
-            <li><strong>Decision 2:</strong> [Describe your design decision] <em>(Score: X, Earnest/Deceptive)</em> - [Explain rationale]</li>
-            <li><strong>Decision 3:</strong> [Describe your design decision] <em>(Score: X, Earnest/Deceptive)</em> - [Explain rationale]</li>
-            <li><strong>Decision 4:</strong> [Describe your design decision] <em>(Score: X, Earnest/Deceptive)</em> - [Explain rationale]</li>
+            <li><strong>Decision 1: Interpretive title ("Same System, Same Results – Regardless of Race")</strong> <em>(Score: -1.5, Deceptive)</em> - The title asserts a strong conclusion that downplays visible variation in the data and frames the NYPD system as fully uniform before the viewer can begin analyzing. This pushes the viewer toward a predetermined interpretation rather than allowing independent evaluation. A more neutral title would probably say something like "broadly similar" rather than "same," however it would be much less persuasive.</li>
+            
+            <li><strong>Decision 2: Row ordering (POC groups first, White last)</strong> <em>(Score: -0.5, Slightly Deceptive)</em> - Placing White at the bottom reduces its role as a natural reference point and subtly changes how comparisons are perceived. This improves visual grouping consistency but slightly influences interpretation of equivalence across groups. A baseline-first or alphabetical ordering was considered, but it made the layout feel less structured and more scattered.</li>
+            
+            <li><strong>Decision 3: Column ordering (Action Taken first)</strong> <em>(Score: -1, Deceptive)</em> - Emphasizing "Action Taken" first draws attention toward positive outcomes and shifts focus away from "No Action" categories. This framing supports the narrative of consistent enforcement, but it subtly biases attention. A more honest layout would sort columns by size and put Unsubstantiated first.</li>
+            
+            <li><strong>Decision 4: Color palette (inferno heatmap)</strong> <em>(Score: +1.5, Earnest)</em> - The color scale is smooth, consistent, and effective for comparing values across groups, which supports accurate interpretation. While darker tones slightly reduce contrast in some areas, the overall encoding remains clear and perceptually reliable. Alternative palettes were considered, but they either reduced readability or introduced accessibility issues that made them less suitable.</li>
+            
+            <li><strong>Decision 5: Grouping labels ("Action Taken / No Action")</strong> <em>(Score: -1, Deceptive)</em> - Grouping multiple distinct outcomes into broad categories simplifies the visualization but hides meaningful variation between different types of decisions. This makes the system appear more uniform and strengthens the intended message, but it reduces analytical detail. A fully separated breakdown was considered, but it made the chart more complex and harder to scan quickly.</li>
         </ul>
     </div>
 
     <br><br>
 
     <h2>Final Reflection</h2>
-<div class="reflection">
-    <p>
-    [Write your answer here - 2-3 sentences]
-    </p>
-    ...
-</div>
+    <div class="reflection">
+        <p><strong>What was straightforward or difficult?</strong><br>
+        Designing these two visualizations made it clear how much influence seemingly small choices such as titles, axis ranges, grouping decisions, and color choices can have on user interpretation. The most straightforward parts were technical, like choosing chart types and implementing layouts, but the difficult part was deciding how to frame the data within the visualizations to persuade the viewer, whether deceptively or not. This required thinking outside of the box to skew perspective, without skewing actual data.
+        </p>
+    
+        <p><strong>What surprised you?</strong><br>
+        What surprised us most was the power of these design choices, especially how strongly wording and framing alone can guide interpretation. It also became clear that even small stylistic decisions can shape what viewers focus on.
+        </p>
+    
+        <p><strong>How do you now define "ethical analysis and visualization"?</strong><br>
+        After completing this project, we definitely have more perspective on the definition of "ethical analysis and visualization." This experience has shown us that it is less about avoiding persuasion entirely, and more about aligning persuasion with faithful data representation. Every visualization persuades to some degree, but ethical ones make their assumptions visible, avoiding distorted scales and variations of meaning. In contrast, misleading visualizations often rely on omission of detail, exaggeration or emphasis of targeted points, or perspective framing. Being clear about categories and definitions also helps viewers better understand the data.
+        </p>
+    
+        <p><strong>What bounds (if any) can you draw to distinguish "acceptable" persuasive choices vs. "misleading" ones?</strong><br>
+        The boundary between acceptable and misleading choices isn't always sharp, but a useful guideline is to simply have good intentions while considering effect. If a design choice systematically pushes viewers toward a conclusion that the data alone doesn't strongly support, it's likely going to mislead. Choices that improve clarity while preserving proportionality and context feel acceptable, even if they still guide interpretation. Ultimately, ethical visualization means giving viewers the ability to reach their own informed conclusions, rather than steering them too aggressively toward one, even without directly falsifying data.
+        </p>
+    </div>
 
 </body>
 </html>
